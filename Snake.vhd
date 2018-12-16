@@ -181,8 +181,8 @@ begin
       else
          clk_cnt <= clk_cnt + 1;
 
-         -- 12,500,000 clk cycle, 0.125 second
-         if (clk_cnt = 12500000) then
+         -- 12,500,000 clk cycle
+         if clk_cnt = 12500000 then
             clk_cnt <= 0;
             if game_status = std_logic_vector(to_unsigned(play, 2)) then
 

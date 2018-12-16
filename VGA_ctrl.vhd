@@ -71,11 +71,11 @@ begin
          clk_cnt <= clk_cnt + 1;
       end if;
       
-      if line_cnt = "0000000000" then
+      if line_cnt = "0000000000" then        -- 0
          vsync <= '0';
-      elsif line_cnt = "0000000010" then
+      elsif line_cnt = "0000000010" then     -- 2
          vsync <= '1';
-      elsif line_cnt = "1000001001" then
+      elsif line_cnt = "1000001001" then     -- 521
          line_cnt <= (others => '0');
          vsync <= '0';
       end if;
